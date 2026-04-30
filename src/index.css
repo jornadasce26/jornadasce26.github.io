@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand palette (Jornadas de Comunicação Estratégica) */
+    --background: 0 0% 97%;              /* #f7f7f7 */
+    --foreground: 206 79% 26%;           /* #0e4975 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 206 79% 26%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 206 79% 26%;
+
+    --primary: 206 79% 26%;              /* deep blue #0e4975 */
+    --primary-foreground: 0 0% 97%;
+
+    --secondary: 205 57% 39%;            /* mid blue #2b6f9c */
+    --secondary-foreground: 0 0% 97%;
+
+    --muted: 210 30% 94%;
+    --muted-foreground: 205 25% 40%;
+
+    --accent: 22 100% 50%;               /* orange #ff6600 */
+    --accent-foreground: 0 0% 100%;
+
+    --sky: 217 100% 83%;                 /* #a8c9ff */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 22 100% 50%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(206 79% 18%) 0%, hsl(206 79% 26%) 45%, hsl(205 57% 39%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(22 100% 50%), hsl(22 100% 60%));
+
+    --shadow-soft: 0 10px 40px -12px hsl(206 79% 20% / 0.25);
+    --shadow-card: 0 4px 24px -8px hsl(206 79% 20% / 0.15);
+    --shadow-glow: 0 0 40px hsl(22 100% 50% / 0.25);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient { background: var(--gradient-hero); }
+  .bg-accent-gradient { background: var(--gradient-accent); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .transition-smooth { transition: var(--transition-smooth); }
+
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(hsl(0 0% 100% / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}

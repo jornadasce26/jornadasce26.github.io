@@ -1,1 +1,3 @@
-# jornadasce26.github.io
+# Welcome to your Lovable project
+
+TODO: Document your project here
