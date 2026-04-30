@@ -1,4 +1,4 @@
-import speechBubble from "@/assets/speech-bubble.jpg";
+import speechBubble from "@/assets/logowhite.png";
 
 const Hero = () => {
   return (
@@ -41,7 +41,7 @@ const Hero = () => {
           <img
             src={speechBubble}
             alt="Balões de fala com ponto de exclamação laranja"
-            className="w-80 h-auto opacity-95 drop-shadow-2xl"
+            className="w-[44rem] h-auto opacity-95 drop-shadow-2xl"
           />
         </div>
       </div>
